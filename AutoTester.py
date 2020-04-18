@@ -122,7 +122,7 @@ if selection == 1: #Use Calculator
     startCalculator()
 elif selection == 2: # Call UiAuto
     makeACall()
-elif selection == 2: # Call ADB
+elif selection == 3: # Call ADB
     makeACallADB()
 elif selection == 4: # Wifi
     interactWifi()
