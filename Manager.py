@@ -1,3 +1,5 @@
+import os
+
 btns = []
 btns.append("Calculator")
 btns.append("C")
@@ -30,3 +32,6 @@ def inputNum():
     while (not isValidNumber(num)):
         num = input("Invalid number, try again: ")
     return num
+
+def identifyDevice():
+    print (os.system("adb devices"))

@@ -98,8 +98,6 @@ def makeACallADB():
     num = input("Enter number to call; ")
     os.system("adb shell am start -a android.intent.action.CALL -d tel:" + str(num))
 
-def identifyDevice():
-    print (os.system("adb devices"))
 
 def makeACall():
     goHome()
@@ -114,9 +112,10 @@ def makeACall():
     myClick(dev(descriptionContains="Call"))
     print "Calling..."
 
+print("Detecting devices...\n")
+man.identifyDevice()
+print "=========================================="
 print("Choose action to perform\n")
-
-identifyDevice()
 selection = input("1)Use calculator\n2)Make a Call (Using UiAutomator)\n3)Make a Call (Using ADB)\n4)Toggle Wi-Fi\n5)Identify Devices\nOption: ")
 
 if selection == 1: #Use Calculator
