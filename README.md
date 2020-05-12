@@ -1,1 +1,1 @@
-# AutoTesterAndroid
+# Android Test Suite SQA II
