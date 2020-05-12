@@ -3,6 +3,7 @@ import time
 from uiautomator import Device
 import Manager as man
 import os
+from sourceData import myJson
 
 dev = Device()
 operations = ['+','−','×','÷']
@@ -55,7 +56,6 @@ def clickNumToCall(n):
 def startCalculator():
     op = 0
     n1 = man.inputNum()
-    
     while(op <=0 or op >+5):
         print "1)+"
         print "2)-"
@@ -63,9 +63,8 @@ def startCalculator():
         print "4)/"
         op = int(input("Choose operation: "))
     n2 = man.inputNum()
-    
     goHome()
-    print "opening calculator"
+    print myJson[0]['function']
     dev.swipe(500, 1500, 500, 500, 30)
 
     # click Calculator btn
@@ -78,12 +77,16 @@ def startCalculator():
     myClick(dev(text=operations[op-1]))
     clickNum(n2)
     myClick(dev(text="="))
+    print myJson[0]['expected_txt']
 
 def toggleWifi():
+    print myJson[3]['function']
+    print myJson[3]['txt']
     if (dev(text="On")):
         myClick(dev(text="On"))
     else:
         myClick(dev(text="Off"))
+    print myJson[3]['expected_txt']
     
 def interactWifi():
     goHome()
