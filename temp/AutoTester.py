@@ -3,7 +3,7 @@ import time
 from uiautomator import Device
 import Manager as man
 import os
-from sourceData import myJson
+from src.utils.sourceData import myJson
 
 dev = Device()
 operations = ['+','−','×','÷']
@@ -87,7 +87,7 @@ def toggleWifi():
     else:
         myClick(dev(text="Off"))
     print myJson[3]['expected_txt']
-    
+
 def interactWifi():
     goHome()
     dev.swipe(500, 1500, 500, 500, 30)
