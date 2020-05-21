@@ -12,7 +12,7 @@ myJson = [
         'function': 'read_devices',
         'isAuto': 'True',
         'txt': 'Un dispositivo conectado',
-        'expected result': 'Serial 1 = R28M410479V-',
+        'expected result': 'Serial 1 = R28M30VCACV-',
         'parameters': {}
     },
     {#TC 3
@@ -362,10 +362,10 @@ myJson = [
         'parameters': {
             'device_id': '1',
             'message':
-                'Yo soy un Saiyajin criado en la Tierra. '
+                'Yo soy un Saiyajin criado en la Tierra.'
                 'Por todos los guerreros Saiyajin que asesinaste'
-                'Y también, por todos los Namekusei que mataste'
-                '¡Juro que te exterminaré!',
+                'Y tambien, por todos los Namekusei que mataste'
+                'Juro que te exterminare',
             'to': '+524494269026',
             'from': '+12183327195',
         }

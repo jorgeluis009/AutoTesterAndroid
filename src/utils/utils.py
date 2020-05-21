@@ -1,11 +1,11 @@
 import csv
 import time
 import os
-from dataKeys import twilioData
+from src.utils.dataKeys import twilioData
 from twilio.rest import Client
-from twilio.twiml.voice_response import VoiceResponse, Say
+from twilio.twiml.voice_response import VoiceResponse
 from subprocess import check_call, check_output
-from AuxUtils import status_adb, keyboard_utils
+from src.utils.AuxUtils import status_adb, keyboard_utils
 
 
 def create_file(file_name, headers):
@@ -43,8 +43,8 @@ def read_devices(debug=False, log_file=os.path.join('log', 'log.csv')):
     output = check_output(['adb', 'devices']).splitlines()
     if len(output) == 2:
         if debug:
-            write_file(log_file, ['result'], {'result': 'No se encontro ningun dispositivo'})
-        raise ValueError('No se encontro ningun dispositivo')
+            write_file(log_file, ['result'], {'result': 'Device not founded'})
+        raise ValueError('Device not founded')
     for i in range(1, len(output) - 1):
         serials.append(output[i].split()[0])
         if debug:
@@ -55,21 +55,21 @@ def read_devices(debug=False, log_file=os.path.join('log', 'log.csv')):
     return serials
 
 
-def adb_call(phone_number, seconds, serial, debug=False, log_file=os.path.join('log', 'log.csv')):
+def adbCall(phone_number, serial, debug=False, log_file=os.path.join('log', 'log.csv')):
     for i in range(len(phone_number)):
         if not (phone_number[i] in keyboard_utils):
             if debug:
                 write_file(log_file, ['result'], {'result': 'Numero de telefono invalido'})
-            raise ValueError('Numero de telefono invalido')
-    if len(phone_number):
+            raise ValueError('Invalid number')
+
+    if not len(phone_number):
         if debug:
             write_file(log_file, ['result'], {'result': 'Numero de telefono invalido'})
-        raise ValueError('Numero de telefono invalido')
-    if debug:
-        print ('Llamando a {}'.format(phone_number))
-    check_call(['adb', '-s', serial, 'shell', 'am', 'start', '-a',
-                'android.intent.action.CALL', '-d', 'tel:{}'.format(phone_number)])
-    time.sleep(seconds)
+        raise ValueError('Invalid number')
+
+    check_call(['adb', '-s', serial, 'shell', 'am', 'start', '-a', 'android.intent.action.CALL', '-d', 'tel:{}'.format(phone_number)])
+
+    time.sleep(3)
     check_call(['adb', '-s', serial, 'shell', 'input', 'keyevent', 'KEYCODE_ENDCALL'])
     check_call(['adb', '-s', serial, 'shell', 'input', 'keyevent', 'KEYCODE_HOME'])
     if debug:
@@ -81,7 +81,7 @@ def adb_wifi(status, serial):
     check_call(['adb', '-s', serial, 'shell', 'svc wifi {}'.format(status_adb[status])])
 
 # TWILIO FUNCTION
-def make_call(message, _to, _from):
+def make_twilio_call(message, toNum, fromNum):
     account_sid = twilioData['account_sid']
     auth_token = twilioData['auth_token']
     response = VoiceResponse()
@@ -90,7 +90,7 @@ def make_call(message, _to, _from):
     client = Client(account_sid, auth_token)
     call = client.calls.create(
                             twiml=response,
-                            to=_to,
-                            from_=_from,
+                            to=toNum,
+                            from_=fromNum,
                             timeout=120,
                         )
