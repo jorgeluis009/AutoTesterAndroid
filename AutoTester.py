@@ -117,7 +117,7 @@ def makeACall():
 
 print("Detecting devices...\n")
 man.identifyDevice()
-print "=========================================="
+print ("==========================================")
 print("Choose action to perform\n")
 selection = input("1)Use calculator\n2)Make a Call (Using UiAutomator)\n3)Make a Call (Using ADB)\n4)Toggle Wi-Fi\n5)Identify Devices\nOption: ")
 
