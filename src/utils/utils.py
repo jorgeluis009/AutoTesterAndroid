@@ -7,16 +7,6 @@ from twilio.twiml.voice_response import VoiceResponse
 from subprocess import check_call, check_output
 from src.utils.AuxUtils import status_adb, keyboard_utils
 
-def create_file(file_name, headers):
-    with open(file_name, 'w') as f:
-        writer = csv.DictWriter(f, fieldnames=headers)
-        writer.writeheader()
-
-def write_file(file_name, headers, row):
-    with open(file_name, 'a') as f:
-        writer = csv.DictWriter(f, fieldnames=headers)
-        writer.writerow(row)
-
 def getSerial(testing=False):
     output = check_output(['adb', 'devices']).splitlines()[1]
     serial = output.split()[0]

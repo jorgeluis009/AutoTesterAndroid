@@ -2,8 +2,7 @@
 import time
 from uiautomator import Device
 from src.utils.sourceData import myJson
-from src.utils.sourceDataDummy import myJson2
-from utils.utils import getSerial, detectDevices, adbCall, create_file, write_file
+from utils.utils import getSerial, detectDevices, adbCall
 from utils.ui import uiCall, uiWifi, uiCalculator, checkForVoiceMail
 from utils.utils import twilioCall
 from datetime import datetime
