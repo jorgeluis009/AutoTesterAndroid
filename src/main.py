@@ -21,7 +21,7 @@ def voiceMessage(testCase):
 
 # f= open("testCases.txt","w+")
 
-for testCase in myJson2:
+for testCase in myJson:
     now = str(datetime.now())
     print "Running Test:", 'TC-' + str(count+1)
     print "Description:", testCase['txt']

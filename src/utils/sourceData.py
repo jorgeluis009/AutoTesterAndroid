@@ -4,7 +4,7 @@ myJson = [
     {#TC 1
         'function': 'detectDevices',
         'txt': 'Ningun dispositivo conectado',
-        'expected result': 'No se encontro ningun dispositivo',
+        'expected result': 'Device connected',
         'parameters': {}
     },
     # === WIFI TC ===
@@ -114,7 +114,7 @@ myJson = [
     # === CALLING USING UI AUTOMATOR===
     {#TC 26
         'function': 'callUI',
-        'txt': 'Local number',
+        'txt': 'Call Local number',
         'expected result': 'Call to 9159951 was successful',
         'parameters': {
             'number_phone': '9159951',
@@ -123,7 +123,7 @@ myJson = [
     },
     {#TC 27
         'function': 'callUI',
-        'txt': 'National number',
+        'txt': 'Call National number',
         'expected result': 'Call to 4492595229 was successful',
         'parameters': {
             'number_phone': '4492595229',
@@ -132,7 +132,7 @@ myJson = [
     },
     {#TC 28
         'function': 'callUI',
-        'txt': 'International number (using + prefix)',
+        'txt': 'Call International number (using + prefix)',
         'expected result': 'Call to +5214492595229 was successful',
         'parameters': {
             'number_phone': '+524494269026',
@@ -141,7 +141,7 @@ myJson = [
     },
     {#TC 29
         'function': 'callUI',
-        'txt': 'Emergency number using *',
+        'txt': 'Call Emergency number using *',
         'expected result': 'Call to *811 was successful',
         'parameters': {
             'number_phone': '*811',
@@ -150,7 +150,7 @@ myJson = [
     },
     {#TC 30
         'function': 'callUI',
-        'txt': 'Number using #',
+        'txt': 'Call Number using #',
         'expected result': 'Call to #311 was successful',
         'parameters': {
             'number_phone': '#311',
@@ -159,8 +159,8 @@ myJson = [
     },
     {#TC 31
         'function': 'callUI',
-        'txt': 'Number with special characters',
-        'expected result': 'Numero de telefono invalido',
+        'txt': 'Call Number with special characters',
+        'expected result': 'Invalid number',
         'parameters': {
             'number_phone': '!449^%',
             'seconds': '3'
@@ -168,8 +168,8 @@ myJson = [
     },
     {#TC 32
         'function': 'callUI',
-        'txt': 'Number using letters and numbers',
-        'expected result': 'Numero de telefono invalido',
+        'txt': 'Call Number using letters and numbers',
+        'expected result': 'Invalid number',
         'parameters': {
             'number_phone': '123test456',
             'seconds': '3'
@@ -177,8 +177,8 @@ myJson = [
     },
     {#TC 33
         'function': 'callUI',
-        'txt': 'Empty number',
-        'expected result': 'Numero de telefono invalido',
+        'txt': 'Call Empty number',
+        'expected result': 'Invalid number',
         'parameters': {
             'number_phone': '',
             'seconds': '3'
@@ -188,7 +188,7 @@ myJson = [
     {#TC 34
         'function': 'voicemailUI',
         'txt': 'Perform a call using twilio, and leave a voice message',
-        'expected result': 'Mensaje de voz encontrado',
+        'expected result': 'Voicemail found',
         'parameters': {
             'message':
                 'Por todos los guerreros Sayayin que asesinaste'
@@ -247,7 +247,7 @@ myJson = [
     {#TC 23
         'function': 'callADB',
         'txt': 'Number with special characters',
-        'expected result': 'Numero de telefono invalido',
+        'expected result': 'Invalid number',
         'parameters': {
             'number_phone': '!449^%',
             'seconds': '3'
@@ -256,7 +256,7 @@ myJson = [
     {#TC 24
         'function': 'callADB',
         'txt': 'Number using letters and numbers',
-        'expected result': 'Numero de telefono invalido',
+        'expected result': 'Invalid number',
         'parameters': {
             'number_phone': '123test456',
             'seconds': '3'
@@ -265,7 +265,7 @@ myJson = [
     {#TC 25
         'function': 'callADB',
         'txt': 'Empty number',
-        'expected result': 'Numero de telefono invalido',
+        'expected result': 'Invalid number',
         'parameters': {
             'number_phone': '',
             'seconds': '3'
