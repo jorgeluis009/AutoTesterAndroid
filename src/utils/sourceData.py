@@ -3,12 +3,12 @@ myJson = [
     # ===  identify Devices functions ===
     {#TC 1
         'function': 'detectDevices',
-        'txt': 'Ningun dispositivo conectado',
+        'txt': 'Device detected',
         'expected result': 'Device connected',
         'parameters': {}
     },
     # === WIFI TC ===
-    {#TC 7
+    {#TC 2
         'function': 'wifiUI',
         'txt': 'Disable Wifi whit Wifi ON',
         'expected result': 'Wi-fi turned Off',
@@ -16,7 +16,7 @@ myJson = [
             'option': '0'
         }
     },
-    {#TC 8
+    {#TC 3
         'function': 'wifiUI',
         'txt': 'Disable Wifi whit Wifi OFF',
         'expected result': 'Wifi is Off already, not action was taken',
@@ -24,7 +24,7 @@ myJson = [
             'option': '0'
         }
     },
-    {#TC 9
+    {#TC 4
         'function': 'wifiUI',
         'txt': 'Enable Wifi whit Wifi OFF',
         'expected result': 'Wifi turned ON',
@@ -32,7 +32,7 @@ myJson = [
             'option': '1'
         }
     },
-    {#TC 10
+    {#TC 5
         'function': 'wifiUI',
         'txt': 'Enable Wifi whit Wifi ON',
         'expected result': 'Wifi is On already, not action was taken.',
@@ -41,7 +41,7 @@ myJson = [
         }
     },
      # === CALCULATOR ===
-    {#TC 11
+    {#TC 6
         'function': 'calculatorUI',
         'txt': 'Add two negative numbers (+)',
         'expected result': 'Correct result',
@@ -51,7 +51,7 @@ myJson = [
             'num_2': '-2'
         }
     },
-    {#TC 12
+    {#TC 7
         'function': 'calculatorUI',
         'txt': 'Using invalid operator',
         'expected result': 'Invalid operator',
@@ -61,7 +61,7 @@ myJson = [
             'num_2': '0'
         }
     },
-    {#TC 13
+    {#TC 8
         'function': 'calculatorUI',
         'txt': 'Using letters',
         'expected result': 'Values are not valid',
@@ -71,7 +71,7 @@ myJson = [
             'num_2': '2c'
         }
     },
-    {#TC 14
+    {#TC 9
         'function': 'calculatorUI',
         'txt': 'Add two numbers',
         'expected result': 'Correct result',
@@ -81,7 +81,7 @@ myJson = [
             'num_2': '5'
         }
     },
-    {#TC 15
+    {#TC 10
         'function': 'calculatorUI',
         'txt': 'Subtract 2 numbers (-)',
         'expected result': 'Correct result',
@@ -91,7 +91,7 @@ myJson = [
             'num_2': '5'
         }
     },
-    {#TC 16
+    {#TC 11
         'function': 'calculatorUI',
         'txt': 'Multiply two numbers (*)',
         'expected result': 'Correct result',
@@ -101,7 +101,7 @@ myJson = [
             'num_2': '5'
         }
     },
-    {#TC 17
+    {#TC 12
         'function': 'calculatorUI',
         'txt': 'Divide two numbers',
         'expected result': 'Correct result',
@@ -112,7 +112,7 @@ myJson = [
         }
     },
     # === CALLING USING UI AUTOMATOR===
-    {#TC 26
+    {#TC 13
         'function': 'callUI',
         'txt': 'Call Local number',
         'expected result': 'Call to 9159951 was successful',
@@ -121,7 +121,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 27
+    {#TC 14
         'function': 'callUI',
         'txt': 'Call National number',
         'expected result': 'Call to 4492595229 was successful',
@@ -130,7 +130,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 28
+    {#TC 15
         'function': 'callUI',
         'txt': 'Call International number (using + prefix)',
         'expected result': 'Call to +5214492595229 was successful',
@@ -139,7 +139,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 29
+    {#TC 16
         'function': 'callUI',
         'txt': 'Call Emergency number using *',
         'expected result': 'Call to *811 was successful',
@@ -148,7 +148,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 30
+    {#TC 17
         'function': 'callUI',
         'txt': 'Call Number using #',
         'expected result': 'Call to #311 was successful',
@@ -157,7 +157,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 31
+    {#TC 18
         'function': 'callUI',
         'txt': 'Call Number with special characters',
         'expected result': 'Invalid number',
@@ -166,7 +166,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 32
+    {#TC 19
         'function': 'callUI',
         'txt': 'Call Number using letters and numbers',
         'expected result': 'Invalid number',
@@ -175,7 +175,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 33
+    {#TC 20
         'function': 'callUI',
         'txt': 'Call Empty number',
         'expected result': 'Invalid number',
@@ -185,7 +185,7 @@ myJson = [
         }
     },
     # === VOICE MAIL ===
-    {#TC 34
+    {#TC 21
         'function': 'voicemailUI',
         'txt': 'Perform a call using twilio, and leave a voice message',
         'expected result': 'Voicemail found',
@@ -199,7 +199,7 @@ myJson = [
         }
     },
      # === Calling using ADB ===
-    {# TC 18
+    {# TC 22
         'function': 'callADB',
         'txt': 'Local number',
         'expected result': 'Call to 9159951 was successful',
@@ -208,7 +208,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 19
+    {#TC 23
         'function': 'callADB',
         'txt': 'National number',
         'expected result': 'Call to 4492595229 was successful',
@@ -217,7 +217,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 20
+    {#TC 24
         'function': 'callADB',
         'txt': 'International number (using + prefix)',
         'expected result': 'Call to +5214492595229 was successful',
@@ -226,7 +226,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 21
+    {#TC 25
         'function': 'callADB',
         'txt': 'Emergency number using *',
         'expected result': 'Call to *811 was successful',
@@ -235,7 +235,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 22
+    {#TC 26
         'function': 'callADB',
         'txt': 'Number using #',
         'expected result': 'Call to #311 was successful',
@@ -244,7 +244,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 23
+    {#TC 27
         'function': 'callADB',
         'txt': 'Number with special characters',
         'expected result': 'Invalid number',
@@ -253,7 +253,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 24
+    {#TC 28
         'function': 'callADB',
         'txt': 'Number using letters and numbers',
         'expected result': 'Invalid number',
@@ -262,7 +262,7 @@ myJson = [
             'seconds': '3'
         }
     },
-    {#TC 25
+    {#TC 29
         'function': 'callADB',
         'txt': 'Empty number',
         'expected result': 'Invalid number',

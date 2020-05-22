@@ -4,7 +4,7 @@ myJson2 = [
     {#TC 1
         'function': 'detectDevices',
         'txt': 'Ningun dispositivo conectado',
-        'expected result': 'No se encontro ningun dispositivo',
+        'expected result': 'No device founded',
         'parameters': {}
     },
     # === WIFI TC ===
