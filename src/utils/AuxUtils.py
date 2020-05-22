@@ -1,5 +1,5 @@
 operators = ['+', '-', '*', '/']
-status_ui = {
+optionsUI = {
     0: 'On',
     1: 'Off',
 }
@@ -13,9 +13,7 @@ keyboard_utils = {
     '7': 'seven',   '8': 'eight',   '9': 'nine',
     '0': 'zero',    '+': 'zero',    '*': 'star', '#': 'pound'
 }
-calculator_utils= {
-    '(': 'parenthesis',
-    ')': 'parenthesis',
-    '+': 'add','-': 'sub','*': 'multi',
+calculatorUI= {
+    '+': 'add','-': 'sub','*': 'mul',
     '/': 'div','.': 'point','=': 'equal'
 }
