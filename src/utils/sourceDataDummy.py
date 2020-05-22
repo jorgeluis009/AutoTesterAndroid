@@ -1,5 +1,5 @@
 #My JSON
-myJson = [
+myJson2 = [
     # ===  identify Devices functions ===
     {#TC 1
         'function': 'detectDevices',
@@ -37,20 +37,6 @@ myJson = [
             'seconds': '3'
         }
     },
-    # === VOICE MAIL ===
-    {#TC 21
-        'function': 'voicemailUI',
-        'txt': 'Perform a call using twilio, and leave a voice message',
-        'expected result': 'Mensaje de voz encontrado',
-        'parameters': {
-            'message':
-                'Por todos los guerreros Sayayin que asesinaste'
-                'Y tambien, por todos los Namekusei que mataste'
-                'Juro que te exterminare',
-            'to': '+524492595229',
-            'from': '+17547048255',
-        }
-    },
      # === Calling using ADB ===
     {# TC 22
         'function': 'callADB',
@@ -60,7 +46,7 @@ myJson = [
             'number_phone': '9159951',
             'seconds': '3'
         }
-    }
+    },
     # {#TC 28
     #     'function': 'callADB',
     #     'txt': 'Number using letters and numbers',
@@ -79,4 +65,18 @@ myJson = [
     #         'seconds': '3'
     #     }
     # }
+    # === VOICE MAIL ===
+    {  # TC 21
+        'function': 'voicemailUI',
+        'txt': 'Perform a call using twilio, and leave a voice message',
+        'expected result': 'Mensaje de voz encontrado',
+        'parameters': {
+            'message':
+                'Por todos los guerreros Sayayin que asesinaste'
+                'Y tambien, por todos los Namekusei que mataste'
+                'Juro que te exterminare',
+            'to': '+524492595229',
+            'from': '+17547048255',
+        }
+    }
 ]
