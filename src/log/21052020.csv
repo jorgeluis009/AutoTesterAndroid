@@ -1,5 +1,1 @@
 test,function,txt,isAuto,parameters,expected result,begin,end
-TC001,read_devices,Ningun dispositivo conectado,False,{},No se encontro ningun dispositivo,21/05/2020 18:41:24,21/05/2020 18:41:24
-TC002,read_devices,Un dispositivo conectado,False,{},Serial 1 = R28M410479V-,21/05/2020 18:41:24,21/05/2020 18:41:24
-TC003,adb_call,Local number,False,"{'number_phone': '9159951', 'device_id': '1'}",Call to 9159951 was successful,21/05/2020 18:41:24,21/05/2020 18:41:24
-TC004,ui_voice_message,"Perform a call using twilio, and leave a voice message",True,"{'to': '+524494269026', 'message': 'Yo soy un Saiyajin criado en la Tierra. Por todos los guerreros Saiyajin que asesinasteY tambien, por todos los Namekusei que matasteJuro que te exterminare', 'from': '+17547048255', 'device_id': '1'}",Mensaje de voz encontrado,21/05/2020 18:41:24,21/05/2020 18:41:32
