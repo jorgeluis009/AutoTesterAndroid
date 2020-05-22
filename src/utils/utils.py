@@ -14,7 +14,6 @@ def getSerial(testing=False):
         print "Serial Number = {}".format(serial)
     return serial
 
-
 def detectDevices(testing):
     serialNums = []
     command = check_output(['adb', 'devices'])
