@@ -13,19 +13,21 @@ count = 0
 
 def voiceMessage(testCase):
     twilioCall(testCase['parameters']['to'], testCase['parameters']['from'], testCase['parameters']['message'])
+    print "Waiting for voice mail..."
     time.sleep(100)
     checkForVoiceMail(dev)
 
+
+
+# f= open("testCases.txt","w+")
+
 for testCase in myJson2:
     now = str(datetime.now())
+    print "Running Test:", 'TC-' + str(count+1)
+    print "Description:", testCase['txt']
     try:
-        print "Test Case #{} = {}".format(count+1, testCase['function'])
-
         if testCase["function"] == "detectDevices":
             detectDevices(True)
-
-        elif testCase["function"] == 'read_device':
-            getSerial(True)
 
         elif testCase['function'] == 'callADB':
             adbCall(testCase['parameters']['number_phone'])
@@ -39,7 +41,7 @@ for testCase in myJson2:
         elif testCase['function'] == 'calculatorUI':
             uiCalculator(dev, testCase['parameters']['num_1'], testCase['parameters']['operator'],testCase['parameters']['num_1'])
 
-        elif testCase['function'] == 'ui_voice_message':
+        elif testCase['function'] == 'voicemailUI':
             voiceMessage(testCase)
     except Exception as e:
         print e
@@ -51,7 +53,14 @@ for testCase in myJson2:
     testCase['test'] = 'TC-' + test_number
     testCase['start'] = now
     testCase['end'] = end
+    print "\n"
+    print "Function:", testCase["function"]
+    print "Test:", testCase["test"]
+    print "Description:", testCase['txt']
+    print "Expected result:", testCase["expected result"]
+    print "Start:", testCase["start"]
+    print "End:", testCase["end"]
 
-    print testCase
+    # f.write("This is line %d\r\n" % (i + 1))
     print "=================="
     # write_file(log_file, fieldnames, testCase)

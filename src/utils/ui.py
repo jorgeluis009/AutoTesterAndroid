@@ -15,13 +15,11 @@ def myClick(button):
         button.click()
         time.sleep(1)
 
-def myLongClick(button):
-    if(button.count != 0):
+def myLongClick(button,dev):
+    while dev(resourceId="com.samsung.android.dialer:id/digits").exists:
         button.long_click()
-        time.sleep(1)
 
 def clickNumToCall(n,dev):
-    print n
     if(n[0] == "+"):
         myLongClick(dev(description="0"))
         n = n[1:]
@@ -34,16 +32,17 @@ def clickNumToCall(n,dev):
     for i in n:
         myClick(dev(description=i))
 
-def uiCall(phone_number, device):
-    goHome(device)
-    print "home"
-    myClick(device(description="Phone"))
-    print 'Phone clicked'
-    myLongClick(device(descriptionContains="Delete"))
-    print 'deleting'
-    clickNumToCall(phone_number,device)
-    myClick(device(descriptionContains="Call"))
+def uiCall(phone_number, dev):
+    goHome(dev)
+    print "home clicked"
+    myClick(dev(description="Phone"))
+    myLongClick(dev(resourceId="com.samsung.android.dialer:id/very_right_frame"), dev)
+
+    clickNumToCall(phone_number,dev)
+    myClick(dev(resourceId="com.samsung.android.dialer:id/dialButton"))
     print "Calling..."
+    time.sleep(3)
+    check_call(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_ENDCALL'])
 
 
 def uiWifi(option, dev):

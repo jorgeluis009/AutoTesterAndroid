@@ -1,14 +1,45 @@
 #My JSON
-myJson2 = [
+myJson = [
     # ===  identify Devices functions ===
-    # {  # TC 2
-    #     'function': 'detectDevices',
-    #     'txt': 'Un dispositivo conectado',
-    #     'expected result': 'Serial 1 = R28M410479V-',
-    #     'parameters': {}
-    # },
-    {  # TC 34
-        'function': 'ui_voice_message',
+    {#TC 1
+        'function': 'detectDevices',
+        'txt': 'Ningun dispositivo conectado',
+        'expected result': 'No se encontro ningun dispositivo',
+        'parameters': {}
+    },
+    # === WIFI TC ===
+    {#TC 2
+        'function': 'wifiUI',
+        'txt': 'Disable Wifi whit Wifi ON',
+        'expected result': 'Wi-fi turned Off',
+        'parameters': {
+            'option': '0'
+        }
+    },
+     # === CALCULATOR ===
+    {#TC 6
+        'function': 'calculatorUI',
+        'txt': 'Add two negative numbers (+)',
+        'expected result': 'Correct result',
+        'parameters': {
+            'num_1': '-3',
+            'operator': '+',
+            'num_2': '-2'
+        }
+    },
+    # === CALLING USING UI AUTOMATOR===
+    {#TC 14
+        'function': 'callUI',
+        'txt': 'National number',
+        'expected result': 'Call to 4492595229 was successful',
+        'parameters': {
+            'number_phone': '4492595229',
+            'seconds': '3'
+        }
+    },
+    # === VOICE MAIL ===
+    {#TC 21
+        'function': 'voicemailUI',
         'txt': 'Perform a call using twilio, and leave a voice message',
         'expected result': 'Mensaje de voz encontrado',
         'parameters': {
@@ -20,55 +51,32 @@ myJson2 = [
             'from': '+17547048255',
         }
     },
-    # {#TC 26
-    #     'function': 'callUI',
-    #     'isAuto': 'True',
-    #     'txt': 'Local number',
-    #     'expected result': 'Call to 9159951 was successful',
+     # === Calling using ADB ===
+    {# TC 22
+        'function': 'callADB',
+        'txt': 'Local number',
+        'expected result': 'Call to 9159951 was successful',
+        'parameters': {
+            'number_phone': '9159951',
+            'seconds': '3'
+        }
+    }
+    # {#TC 28
+    #     'function': 'callADB',
+    #     'txt': 'Number using letters and numbers',
+    #     'expected result': 'Numero de telefono invalido',
     #     'parameters': {
-    #         'device_id': '1',
-    #         'number_phone': '9159951',
+    #         'number_phone': '123test456',
     #         'seconds': '3'
     #     }
     # },
-    # {  # TC 18
-    #     'function': 'adb_call',
-    #     'txt': 'Local number',
-    #     'expected result': 'Call to 9159951 was successful',
+    # {#TC 29
+    #     'function': 'callADB',
+    #     'txt': 'Empty number',
+    #     'expected result': 'Numero de telefono invalido',
     #     'parameters': {
-    #         'device_id': '1',
-    #         'number_phone': '9159951'
-    #     }
-    # },
-    # === VOICE MAIL ===
-    # {#TC 34
-    #     'function': 'ui_voice_message',
-    #     'txt': 'Perform a call using twilio, and leave a voice message',
-    #     'expected result': 'Mensaje de voz encontrado',
-    #     'parameters': {
-    #         'device_id': '1',
-    #         'message':
-    #             'Yo soy un Saiyajin criado en la Tierra. '
-    #             'Por todos los guerreros Saiyajin que asesinaste'
-    #             'Y tambien, por todos los Namekusei que mataste'
-    #             'Juro que te exterminare',
-    #         'to': '+524492595229',
-    #         'from': '+17547048255',
-    #     }
-    # },
-    # {  # TC 26
-    #     'function': 'adb_ui_call',
-    #     'isAuto': 'True',
-    #     'txt': 'Local number',
-    #     'expected result': 'Call to 9159951 was successful',
-    #     'parameters': {
-    #         'device_id': '1',
-    #         'number_phone': '9159951',
+    #         'number_phone': '',
     #         'seconds': '3'
     #     }
-    # },
+    # }
 ]
-
-
-
-

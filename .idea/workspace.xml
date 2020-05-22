@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc56df01-d6ad-48cf-801a-55eedcf6121f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/AuxUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/AuxUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/sourceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sourceData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/sourceDataDummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sourceDataDummy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/AutoTester.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/AutoTester.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5155243">
+    <splitter split-orientation="horizontal" split-proportion="0.5985401">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="349">
-                  <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+                <state relative-caret-position="144">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
                   <folding>
                     <element signature="e#15#26#0" expanded="true" />
                   </folding>
@@ -36,7 +34,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/temp/AutoTester.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
+                <state relative-caret-position="880">
                   <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="18" />
                 </state>
               </provider>
@@ -49,8 +47,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/utils/ui.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1429">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="426">
+                  <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
                   <folding>
                     <element signature="e#15#62#0" expanded="true" />
                   </folding>
@@ -61,8 +59,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/utils/utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="347">
-                  <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+                <state relative-caret-position="240">
+                  <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="76" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -71,10 +69,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/utils/sourceDataDummy.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="160">
+                  <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/utils/sourceData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="443">
-                  <caret line="300" column="35" lean-forward="true" selection-start-line="300" selection-start-column="35" selection-end-line="300" selection-end-column="35" />
+                <state relative-caret-position="154">
+                  <caret line="112" column="6" lean-forward="true" selection-end-line="278" />
                 </state>
               </provider>
             </entry>
@@ -84,15 +91,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state>
                   <caret column="22" selection-start-column="22" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/utils/sourceDataDummy.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -126,7 +124,6 @@
       <find>case</find>
       <find>adb_ui_voice</find>
       <find>phone_number</find>
-      <find>adb_ui_wifi</find>
       <find>operand2</find>
       <find>_operand2</find>
       <find>device</find>
@@ -134,6 +131,11 @@
       <find>str_operand2</find>
       <find>negative</find>
       <find>count</find>
+      <find>adb_ui_wifi</find>
+      <find>adb_ui_calculator</find>
+      <find>adb_call</find>
+      <find>adb_ui_call</find>
+      <find>myJson</find>
     </findStrings>
     <replaceStrings>
       <replace>status_adb</replace>
@@ -141,7 +143,6 @@
       <replace>testCase</replace>
       <replace>calculator_utils</replace>
       <replace>num</replace>
-      <replace>wifiUI</replace>
       <replace>num1</replace>
       <replace>num2</replace>
       <replace>num_2</replace>
@@ -151,6 +152,10 @@
       <replace>b</replace>
       <replace>isNegative</replace>
       <replace>isNegative1</replace>
+      <replace>wifiUI</replace>
+      <replace>calculatorUI</replace>
+      <replace>callADB</replace>
+      <replace>callUI</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -172,18 +177,18 @@
         <option value="$PROJECT_DIR$/src/utils/dataKeys.py" />
         <option value="$PROJECT_DIR$/temp/AutoTester.py" />
         <option value="$PROJECT_DIR$/src/utils/AuxUtils.py" />
-        <option value="$PROJECT_DIR$/src/utils/ui.py" />
         <option value="$PROJECT_DIR$/src/utils/utils.py" />
-        <option value="$PROJECT_DIR$/src/main.py" />
-        <option value="$PROJECT_DIR$/src/utils/sourceDataDummy.py" />
         <option value="$PROJECT_DIR$/src/utils/sourceData.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
+        <option value="$PROJECT_DIR$/src/utils/ui.py" />
+        <option value="$PROJECT_DIR$/src/utils/sourceDataDummy.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="481" />
-    <option name="width" value="1447" />
-    <option name="height" value="1066" />
+    <option name="x" value="444" />
+    <option name="width" value="1483" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectId" id="1aMlIZqpYt5shL6hMmXVe2IaN4W" />
   <component name="ProjectView">
@@ -191,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,6 +223,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,12 +443,12 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10063224" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11169652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33118972" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23365487" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36227223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -559,17 +564,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/AutoTester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/dataKeys.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/AutoTester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -580,20 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1429">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#15#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        <state relative-caret-position="144">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
           </folding>
@@ -602,25 +597,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="76" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/sourceDataDummy.py">
+    <entry file="file://$PROJECT_DIR$/src/utils/ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+        <state relative-caret-position="426">
+          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+          <folding>
+            <element signature="e#15#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/sourceData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="300" column="35" lean-forward="true" selection-start-line="300" selection-start-column="35" selection-end-line="300" selection-end-column="35" />
+        <state relative-caret-position="154">
+          <caret line="112" column="6" lean-forward="true" selection-end-line="278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/sourceDataDummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>

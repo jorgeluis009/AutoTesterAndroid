@@ -2,44 +2,14 @@
 myJson = [
     # ===  identify Devices functions ===
     {#TC 1
-        'function': 'read_devices',
-        'txt': 'Ningun dispositivo conectado',
-        'expected result': 'No se encontro ningun dispositivo',
-        'parameters': {}
-    },
-    {#TC 2
-        'function': 'read_devices',
-        'txt': 'Un dispositivo conectado',
-        'expected result': 'Serial 1 = R28M30VCACV-',
-        'parameters': {}
-    },
-    {#TC 3
-        'function': 'read_devices',
-        'txt': 'Dos o mas dispositivos conectados',
-        'expected result': '?',
-        'parameters': {}
-    },
-    {#TC 4
-        'function': 'read_device',
-        'txt': 'Un dispositivo conectado',
-        'expected result': 'Serial = R28M410479V',
-        'parameters': {}
-    },
-    {#TC 5
-        'function': 'read_device',
-        'txt': 'Un dispositivo conectado',
-        'expected result': 'list index out of range',
-        'parameters': {}
-    },
-    {#TC 6
-        'function': 'read_device',
+        'function': 'detectDevices',
         'txt': 'Ningun dispositivo conectado',
         'expected result': 'No se encontro ningun dispositivo',
         'parameters': {}
     },
     # === WIFI TC ===
     {#TC 7
-        'function': 'adb_ui_wifi',
+        'function': 'wifiUI',
         'txt': 'Disable Wifi whit Wifi ON',
         'expected result': 'Wi-fi turned Off',
         'parameters': {
@@ -47,7 +17,7 @@ myJson = [
         }
     },
     {#TC 8
-        'function': 'adb_ui_wifi',
+        'function': 'wifiUI',
         'txt': 'Disable Wifi whit Wifi OFF',
         'expected result': 'Wifi is Off already, not action was taken',
         'parameters': {
@@ -55,7 +25,7 @@ myJson = [
         }
     },
     {#TC 9
-        'function': 'adb_ui_wifi',
+        'function': 'wifiUI',
         'txt': 'Enable Wifi whit Wifi OFF',
         'expected result': 'Wifi turned ON',
         'parameters': {
@@ -63,7 +33,7 @@ myJson = [
         }
     },
     {#TC 10
-        'function': 'adb_ui_wifi',
+        'function': 'wifiUI',
         'txt': 'Enable Wifi whit Wifi ON',
         'expected result': 'Wifi is On already, not action was taken.',
         'parameters': {
@@ -72,7 +42,7 @@ myJson = [
     },
      # === CALCULATOR ===
     {#TC 11
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Add two negative numbers (+)',
         'expected result': 'Correct result',
         'parameters': {
@@ -82,7 +52,7 @@ myJson = [
         }
     },
     {#TC 12
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Using invalid operator',
         'expected result': 'Invalid operator',
         'parameters': {
@@ -92,7 +62,7 @@ myJson = [
         }
     },
     {#TC 13
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Using letters',
         'expected result': 'Values are not valid',
         'parameters': {
@@ -102,7 +72,7 @@ myJson = [
         }
     },
     {#TC 14
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Add two numbers',
         'expected result': 'Correct result',
         'parameters': {
@@ -112,7 +82,7 @@ myJson = [
         }
     },
     {#TC 15
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Subtract 2 numbers (-)',
         'expected result': 'Correct result',
         'parameters': {
@@ -122,7 +92,7 @@ myJson = [
         }
     },
     {#TC 16
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Multiply two numbers (*)',
         'expected result': 'Correct result',
         'parameters': {
@@ -132,7 +102,7 @@ myJson = [
         }
     },
     {#TC 17
-        'function': 'adb_ui_calculator',
+        'function': 'calculatorUI',
         'txt': 'Divide two numbers',
         'expected result': 'Correct result',
         'parameters': {
@@ -141,82 +111,9 @@ myJson = [
             'num_2': '5'
         }
     },
-    # === Calling using ADB ===
-    {# TC 18
-        'function': 'adb_call',
-        'txt': 'Local number',
-        'expected result': 'Call to 9159951 was successful',
-        'parameters': {
-            'number_phone': '9159951',
-            'seconds': '3'
-        }
-    },
-    {#TC 19
-        'function': 'adb_call',
-        'txt': 'National number',
-        'expected result': 'Call to 4492595229 was successful',
-        'parameters': {
-            'number_phone': '4492595229',
-            'seconds': '3'
-        }
-    },
-    {#TC 20
-        'function': 'adb_call',
-        'txt': 'International number (using + prefix)',
-        'expected result': 'Call to +5214492595229 was successful',
-        'parameters': {
-            'number_phone': '+524492595229',
-            'seconds': '3'
-        }
-    },
-    {#TC 21
-        'function': 'adb_call',
-        'txt': 'Emergency number using *',
-        'expected result': 'Call to *811 was successful',
-        'parameters': {
-            'number_phone': '*811',
-            'seconds': '3'
-        }
-    },
-    {#TC 22
-        'function': 'adb_call',
-        'txt': 'Number using #',
-        'expected result': 'Call to #311 was successful',
-        'parameters': {
-            'number_phone': '#311',
-            'seconds': '3'
-        }
-    },
-    {#TC 23
-        'function': 'adb_call',
-        'txt': 'Number with special characters',
-        'expected result': 'Numero de telefono invalido',
-        'parameters': {
-            'number_phone': '!449^%',
-            'seconds': '3'
-        }
-    },
-    {#TC 24
-        'function': 'adb_call',
-        'txt': 'Number using letters and numbers',
-        'expected result': 'Numero de telefono invalido',
-        'parameters': {
-            'number_phone': '123test456',
-            'seconds': '3'
-        }
-    },
-    {#TC 25
-        'function': 'adb_call',
-        'txt': 'Empty number',
-        'expected result': 'Numero de telefono invalido',
-        'parameters': {
-            'number_phone': '',
-            'seconds': '3'
-        }
-    },
     # === CALLING USING UI AUTOMATOR===
     {#TC 26
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'Local number',
         'expected result': 'Call to 9159951 was successful',
         'parameters': {
@@ -225,16 +122,16 @@ myJson = [
         }
     },
     {#TC 27
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'National number',
         'expected result': 'Call to 4492595229 was successful',
         'parameters': {
-            'number_phone': '4494269026',
+            'number_phone': '4492595229',
             'seconds': '3'
         }
     },
     {#TC 28
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'International number (using + prefix)',
         'expected result': 'Call to +5214492595229 was successful',
         'parameters': {
@@ -243,7 +140,7 @@ myJson = [
         }
     },
     {#TC 29
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'Emergency number using *',
         'expected result': 'Call to *811 was successful',
         'parameters': {
@@ -252,7 +149,7 @@ myJson = [
         }
     },
     {#TC 30
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'Number using #',
         'expected result': 'Call to #311 was successful',
         'parameters': {
@@ -261,7 +158,7 @@ myJson = [
         }
     },
     {#TC 31
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'Number with special characters',
         'expected result': 'Numero de telefono invalido',
         'parameters': {
@@ -270,7 +167,7 @@ myJson = [
         }
     },
     {#TC 32
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'Number using letters and numbers',
         'expected result': 'Numero de telefono invalido',
         'parameters': {
@@ -279,7 +176,7 @@ myJson = [
         }
     },
     {#TC 33
-        'function': 'adb_ui_call',
+        'function': 'callUI',
         'txt': 'Empty number',
         'expected result': 'Numero de telefono invalido',
         'parameters': {
@@ -289,7 +186,7 @@ myJson = [
     },
     # === VOICE MAIL ===
     {#TC 34
-        'function': 'ui_voice_message',
+        'function': 'voicemailUI',
         'txt': 'Perform a call using twilio, and leave a voice message',
         'expected result': 'Mensaje de voz encontrado',
         'parameters': {
@@ -301,6 +198,79 @@ myJson = [
             'from': '+17547048255',
         }
     },
+     # === Calling using ADB ===
+    {# TC 18
+        'function': 'callADB',
+        'txt': 'Local number',
+        'expected result': 'Call to 9159951 was successful',
+        'parameters': {
+            'number_phone': '9159951',
+            'seconds': '3'
+        }
+    },
+    {#TC 19
+        'function': 'callADB',
+        'txt': 'National number',
+        'expected result': 'Call to 4492595229 was successful',
+        'parameters': {
+            'number_phone': '4492595229',
+            'seconds': '3'
+        }
+    },
+    {#TC 20
+        'function': 'callADB',
+        'txt': 'International number (using + prefix)',
+        'expected result': 'Call to +5214492595229 was successful',
+        'parameters': {
+            'number_phone': '+524492595229',
+            'seconds': '3'
+        }
+    },
+    {#TC 21
+        'function': 'callADB',
+        'txt': 'Emergency number using *',
+        'expected result': 'Call to *811 was successful',
+        'parameters': {
+            'number_phone': '*811',
+            'seconds': '3'
+        }
+    },
+    {#TC 22
+        'function': 'callADB',
+        'txt': 'Number using #',
+        'expected result': 'Call to #311 was successful',
+        'parameters': {
+            'number_phone': '#311',
+            'seconds': '3'
+        }
+    },
+    {#TC 23
+        'function': 'callADB',
+        'txt': 'Number with special characters',
+        'expected result': 'Numero de telefono invalido',
+        'parameters': {
+            'number_phone': '!449^%',
+            'seconds': '3'
+        }
+    },
+    {#TC 24
+        'function': 'callADB',
+        'txt': 'Number using letters and numbers',
+        'expected result': 'Numero de telefono invalido',
+        'parameters': {
+            'number_phone': '123test456',
+            'seconds': '3'
+        }
+    },
+    {#TC 25
+        'function': 'callADB',
+        'txt': 'Empty number',
+        'expected result': 'Numero de telefono invalido',
+        'parameters': {
+            'number_phone': '',
+            'seconds': '3'
+        }
+    }
 ]
 
 
