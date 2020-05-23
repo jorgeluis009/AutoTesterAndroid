@@ -60,7 +60,10 @@ def twilioCall(toNum, fromNum, message):
     client = Client(account_sid, auth_token)
     call = client.calls.create(
                                 # twiml='<Response>'
-                                #       '<Say voice="alice">Thank you george, hello everyone</Say>'
+                                #       '<Say voice="alice">
+                        #                  Por todos los guerreros Sayayin que asesinaste'
+                        #                 'Y tambien, por todos los Namekusei que mataste'
+                        #                 'Juro que te exterminare
                                 #       '</Response>',
                                 twiml=response,
                                 to=toNum,

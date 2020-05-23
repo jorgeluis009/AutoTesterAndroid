@@ -4,7 +4,6 @@ from uiautomator import Device
 import os
 import time
 from AuxUtils import keyboard_utils, calculatorUI, optionsUI, operators
-from utils import write_file
 
 def goHome(dev):
     dev.press.home()
@@ -130,7 +129,6 @@ def uiCalculator(dev, num1, operator, num2):
 
         #Click equal
         myClick(dev(resourceId="com.sec.android.app.popupcalculator:id/calc_keypad_btn_equal"))
-
 
 def checkForVoiceMail(dev):
     title = "new voicemail"

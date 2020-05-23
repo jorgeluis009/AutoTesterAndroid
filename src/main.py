@@ -2,6 +2,7 @@
 import time
 from uiautomator import Device
 from src.utils.sourceData import myJson
+from src.utils.sourceDataDummy import myJson2
 from utils.utils import getSerial, detectDevices, adbCall
 from utils.ui import uiCall, uiWifi, uiCalculator, checkForVoiceMail
 from utils.utils import twilioCall
@@ -16,11 +17,9 @@ def voiceMessage(testCase):
     time.sleep(100)
     checkForVoiceMail(dev)
 
-
-
 # f= open("testCases.txt","w+")
 
-for testCase in myJson:
+for testCase in myJson2:
     now = str(datetime.now())
     print "Running Test:", 'TC-' + str(count+1)
     print "Description:", testCase['txt']
